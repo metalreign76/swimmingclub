@@ -1,13 +1,24 @@
 'use strict';
 const fs = require('fs');
 
+function formatTime(time) {
+    var baseTime = time.slice(0,-1).trim();
+    if(baseTime.indexOf(":") == -1) {
+        return "00:" + baseTime;
+    }
+    else
+        return "0" + baseTime;
+}
+
+const EventName = "LASC vs Strule (PTL)";
+const EventDate = "16/02/2019"
+const EventCode = "8D90DD1C-7914-427F-9F73-28CACF2954C9"
+const timingsCSV = "ptl_strule.csv"
+
 var events = [];
 //Create fresh import file
 var output = fs.openSync('ImportSwimTimes.csv', 'w+');
 fs.writeSync(output, "SE Number,Date,Pool Size,Swim Distance,Stroke,Time,Split Time 1,Split Distance 1,Split Time 2,Split Distance 2,Split Time 3,Split Distance 3,Split Time 4,Split Distance 4,Split Time 5,Split Distance 5,Position,Relay,Event Number,Round Code,Gala (event ID),Location,Licenced,Licence Level\n")
-
-//Create fresh events file
-var eventFS = fs.openSync('newEvents.csv', 'w+');
 
 
 // First import Swim Ireland Mappings into program
@@ -21,59 +32,54 @@ SI_Mappings_Input.forEach(mapping => {
         SI_Mappings_JSON[mapping.split(',')[0]] = mapping.split(',')[1];
 })
 
-// Now import Event Mappings into program
-// console.log("Loading in Event mapping file")
-// const eventsInput = fs.readFileSync('MasterEventsList.csv').toString().split("\n");
-
-// var eventsInput_JSON = {};
-
-// eventsInput.forEach(mapping => {
-//     if(mapping.split(',')[0].length)
-//         eventsInput_JSON[mapping.split(',')[0]] = mapping.split(',')[1];
-// })
 
 console.log("Now loading in Timings file")
-const Timings_Input = fs.readFileSync('ptl_leander.csv').toString().split("\n");
+const Timings_Input = fs.readFileSync(timingsCSV).toString().split("\n");
 console.log("Beginning to process Timings file");
 
 var reportLineArray;
 var SwimmerName;
 var currentSINumber;
+var currDistance;
+var currEvent
+var eventArray;
 
 Timings_Input.forEach(reportLine => {
     reportLineArray = reportLine.split(',');
-    if(reportLineArray[33] == 'LVADY') {
-        SwimmerName = reportLineArray[1].split('(')[0].trim();
+
+    if(reportLineArray[0].match(/^Event #/)) {
+        eventArray = reportLineArray[0].split(' ');
+        currDistance = eventArray[7];
+        currEvent = eventArray[8];
+        console.log("Event:", currEvent, "Distance:", currDistance);
+    }
+
+    if((reportLineArray[6] == 'F')||(reportLineArray[6] == 'M')) {
+        SwimmerName = reportLineArray[10].slice(0,-1).trim() + " " +
+                        reportLineArray[9].slice(1,999).trim();
         if(!SI_Mappings_JSON.hasOwnProperty(SwimmerName)) {
-            console.log("Cant map", SwimmerName)
             currentSINumber = "";
+            console.log("Can't map", SwimmerName)
         }
         else {
             console.log("Processing times for", SwimmerName);
             currentSINumber = SI_Mappings_JSON[SwimmerName];
-        }
-    }
-
-    if(reportLineArray[1] && reportLineArray[1].trim().match(/^([0-9]{0,2}.[0-9]{1,2}.[0-9]{2})$/)) {
-
-        if(currentSINumber.length) // valid Swimmer
-        {
             fs.writeSync(output, currentSINumber.trim());
             fs.writeSync(output, ",");
 
-            fs.writeSync(output, reportLineArray[24]); //Date
+            fs.writeSync(output, EventDate); //Date
             fs.writeSync(output, ",");
 
-            fs.writeSync(output, reportLineArray[3] == 'S' ? '25' : '50'); //Pool Size
+            fs.writeSync(output, '25'); //Pool Size
             fs.writeSync(output, ","); 
 
-            fs.writeSync(output, reportLineArray[14]); //Distance
+            fs.writeSync(output, currDistance); //Distance
             fs.writeSync(output, ",");
 
-            fs.writeSync(output, reportLineArray[18] == 'IM' ? 'Medley' : reportLineArray[18]); //Stroke
+            fs.writeSync(output, currEvent== 'IM' ? 'Medley' : currEvent); //Stroke
             fs.writeSync(output, ",");
 
-            fs.writeSync(output, reportLineArray[1]); //Time
+            fs.writeSync(output, formatTime(reportLineArray[1])); //Time
             fs.writeSync(output, ",");
 
             fs.writeSync(output, ","); //Split Time 1
@@ -91,26 +97,16 @@ Timings_Input.forEach(reportLine => {
             fs.writeSync(output, ","); //Event Number
             fs.writeSync(output, ","); //Round Code
 
-            fs.writeSync(output, eventsInput_JSON[reportLineArray[29]]); //Gala
+            fs.writeSync(output, EventCode); //Gala
             fs.writeSync(output, ",");
-            if(!events.includes(reportLineArray[29])) {
-                events.push(reportLineArray[29]);
-                fs.writeSync(eventFS, reportLineArray[29])
-                fs.writeSync(eventFS, ',')
-                fs.writeSync(eventFS, reportLineArray[24])
-                fs.writeSync(eventFS, ',')
-                fs.writeSync(eventFS, reportLineArray[3] == 'S' ? '25' : '50')
-                fs.writeSync(eventFS, '\n')
-            }
-
             fs.writeSync(output, ","); //Location
             fs.writeSync(output, ","); //Licensed
             fs.writeSync(output, "\n"); //Licensed Level
-        }     
-    }   
+        }
+    }
+
 })
 
 fs.closeSync(output);
-fs.closeSync(eventFS);
 
 console.log("Timings file generated")
