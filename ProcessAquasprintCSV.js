@@ -24,17 +24,17 @@ function formatTime(time) {
 
 }
 
-const EventName = "Lisburn vs LASC (Aquasprint)";
-const EventLocation = "Lisburn LeisurePlex"
-const EventDate = "19/05/2019"
-const EventCode = "334C99FD-8907-4BAE-B84B-EFDA19EC7BCD"
-const timingsCSV = "Aquasprint_LisburnMay2019.csv"
+const EventName = "Lisburn vs Colerain vs LASC (Aquasprint Finals)";
+const EventLocation = "Larne Leisure Centre"
+const EventDate = "07/06/2019"
+const EventCode = "F8AEC1EF-4696-4B8E-A855-7A5D426D2DA0"
+const timingsCSV = "AquasprintFinals2019.csv"
 
 var unmappedSwimmers = [];
 
 var events = [];
 //Create fresh import file
-var output = fs.openSync('ImportSwimTimes_bangor.csv', 'w+');
+var output = fs.openSync('ImportSwimTimes_lisburn.csv', 'w+');
 fs.writeSync(output, "SE Number,Date,Pool Size,Swim Distance,Stroke,Time,Split Time 1,Split Distance 1,Split Time 2,Split Distance 2,Split Time 3,Split Distance 3,Split Time 4,Split Distance 4,Split Time 5,Split Distance 5,Position,Relay,Event Number,Round Code,Gala (event ID),Location,Licenced,Licence Level\n")
 
 
@@ -87,6 +87,7 @@ var eventNumber
 Timings_Input.forEach(reportLine => {
     reportLineArray = reportLine.split(',');
 
+//    console.log("Checking:", reportLineArray[0])
     if(Strokes.includes(reportLineArray[0]))
     {
         currEvent = StrokesToHytekStrokes[reportLineArray[0]]

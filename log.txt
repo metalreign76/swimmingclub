@@ -1,0 +1,84 @@
+Loading in Swim Ireland mapping file
+Now loading in Timings file
+Beginning to process Timings file
+Detected stroke: 
+Detected stroke: 
+Detected stroke: Back
+Limavady Swimmer detected: Myia Mc Clamont
++++++++++ Can't map Myia Mc Clamont
+Limavady Swimmer detected: Caelyn O Connor
+Limavady Swimmer detected: Tom Cormie
+Limavady Swimmer detected: Henry Connell
+Limavady Swimmer detected: Alice Caldwell
+Limavady Swimmer detected: Emma Gallagher
+Limavady Swimmer detected: Sam Staats Howard
+Limavady Swimmer detected: Kevin Mc Macken
+Limavady Swimmer detected: Anna Mc Gookin
+Limavady Swimmer detected: Amy Mc Gurk
+Limavady Swimmer detected: Cailean Gallagher
+Limavady Swimmer detected: Oliver Smith
+Limavady Swimmer detected: Erin Callaghan
+Limavady Swimmer detected: Emily Butcher
+Limavady Swimmer detected: Ben Dinsmore
+Limavady Swimmer detected: Darragh Mc Cann-Kennedy
+Detected stroke: Breast
+Limavady Swimmer detected: Myia Mc Clamont
++++++++++ Can't map Myia Mc Clamont
+Limavady Swimmer detected: Fiona O Neill
+Limavady Swimmer detected: Henry Connell
+Limavady Swimmer detected: Jack Mc Gookin
+Limavady Swimmer detected: Alice Caldwell
+Limavady Swimmer detected: Emma Gallagher
+Limavady Swimmer detected: Sam Staats Howard
+Limavady Swimmer detected: Kevin Mc Macken
+Limavady Swimmer detected: Brooke Mc Clamont
+Limavady Swimmer detected: Ellie Lundy
+Limavady Swimmer detected: Cailean Gallagher
+Limavady Swimmer detected: Alexander Blaha
+Limavady Swimmer detected: Niamh Mc Henry
+Limavady Swimmer detected: Rose Mc Laughlin
+Limavady Swimmer detected: Joshua Hunt
+Limavady Swimmer detected: Caleb Craig
+Detected stroke: Fly
+Limavady Swimmer detected: Myia Mc Clamont
++++++++++ Can't map Myia Mc Clamont
+Limavady Swimmer detected: Fiona O Neill
+Limavady Swimmer detected: Tom Cormie
+Limavady Swimmer detected: Henry Connell
+Limavady Swimmer detected: Alice Caldwell
+Limavady Swimmer detected: Katie Keown
+Limavady Swimmer detected: Sam Staats Howard
+Limavady Swimmer detected: Kevin Mc Macken
+Limavady Swimmer detected: Anna Mc Gookin
+Limavady Swimmer detected: Brooke Mc Clamont
+Limavady Swimmer detected: Cailean Gallagher
+Limavady Swimmer detected: Oliver Smith
+Limavady Swimmer detected: Abbi Craig
+Limavady Swimmer detected: Emily Butcher
+Limavady Swimmer detected: Joshua Hunt
+Limavady Swimmer detected: Darragh Mc Cann-Kennedy
+Detected stroke: Free
+Limavady Swimmer detected: Myia Mc Clamont
++++++++++ Can't map Myia Mc Clamont
+Limavady Swimmer detected: Fiona O Neill
+Limavady Swimmer detected: Tom Cormie
+Limavady Swimmer detected: Eoin Mc Alinden
+Limavady Swimmer detected: Alice Caldwell
+Limavady Swimmer detected: Katie Keown
+Limavady Swimmer detected: Kevin Mc Macken
+Limavady Swimmer detected: Sam Staats Howard
+Limavady Swimmer detected: Anna Mc Gookin
+Limavady Swimmer detected: Brooke Mc Clamont
+Limavady Swimmer detected: Cailean Gallagher
+Limavady Swimmer detected: Oliver Smith
+Limavady Swimmer detected: Abbi Craig
+Limavady Swimmer detected: Emily Butcher
+Limavady Swimmer detected: Ben Dinsmore
+Limavady Swimmer detected: Jude Williams
+Detected stroke: 
+Detected stroke: 
+Timings file generated
+Unmapped Swimmers [ 'Myia Mc Clamont',
+  'Myia Mc Clamont',
+  'Myia Mc Clamont',
+  'Myia Mc Clamont' ]
