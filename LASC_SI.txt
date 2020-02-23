@@ -24,10 +24,15 @@ Erin Gallagher,30050802
 Eva Campbell,30050803
 Maisie Campbell,20110616
 Maise Campbell,20110616
+Rebecca Carson,20110805
 Eden-Faith Carlisle,20100923
+Eden Faith Carlise,20100923
 Nathan Carlisle,20090105
+Nathan Carlise,20090105
+Annie Connell,20110910
 Henry Connell,30050804
 Chloe Cooke,30050805
+Megan Cooper,20120131
 Evie Conor,20080908
 Evie Connor,20080908
 Alex Convery,20100402
@@ -39,23 +44,31 @@ Collette Craig,30050964
 Caleb Craig,30050808
 Leah Craig,30050810
 Abbi Craig,30050811
+Lucia Deeney,20110505
 Odhran Devine,20090823
 Rosemary Devine,30040728
 Barry Dinsmore,30050965
 Georgia Dinsmore,30050812
 Toby Dinsmore,30050837
 Ben Dinsmore,30050838
+Evan Doherty,20120530
+Evan Dogherty,20120530
 Josh Doherty,20060919
 Rebecca Donnelly,20190210
 Quentin Farren,30055052
+Quentinn Farren,30055052
 Rhianna Farren,30050839
 Marlin Fuss,20060216
+Darcy Fyfe,20110208
+Shane Fyfe,20100319
 Cliodhna Gallagher,30050841
+Davin Gallagher,20120720
 Siofra Gallagher,30050842
 Siofra Gallgher,30050842
 Cailean Gallagher,30050843
 Emma Gallagher,20090222
 Grace Gallagher,30050844
+Grace Gallager,30050844
 Cara Gallagher,30050853
 Adam Gallagher,30055050
 Aodhan Gallagher,10000002
@@ -64,6 +77,7 @@ Alec George,30050845
 Ellen Gibbons,30050846
 Ellen Gibbon,30050846
 Jessica Glasser,30050847
+Jessica Glassier,30050847
 Eoghan Gormley,30050848
 Corin Gray,30050849
 Corin Grey,30050849
@@ -78,14 +92,18 @@ Annaleece Heatherington,20071219
 Annaleece Hetherigton,20071219
 Danny Homes,20091125
 Danny Holmes,20091125
+Daniel Holmes,20091125
 Sophie Holmes,20080722
 Sophie Homes,20080722
 Joshua Hunt,30050854
+Faye Irwin,20130504
 Otis Irwin,30055049
+Sian Jones,20081119
 Conleith Keown,30050855
 Katie Keown,30050856
 Emma Kershaw,30050857
 Zoe Kershaw,30050858
+Alice King,20110202
 Emila Kingston,30055051
 Emilia Kingston,30055051
 Amelia Kingston,30055051
@@ -96,10 +114,17 @@ Kensa Lawry,30050874
 Kenza Lawry,30050874
 Kenza Lowry,30050874
 Max Loughery,30050875
+Max Loughrey,30050875
 Aaron Loughery,30050876
+Aaron Loughrey,30050876
 Casey Lundy,30050878
 Ellie Lundy,30050879
+Amy Lundy,10000003
+Ryan Lundy,10000004
+Clara Lynch,20080904
 Katie Lynn,30050881
+Catherine Lynn,30050881
+Katy Lynn,30050881
 Aileen Mc Alinden,30050882
 Eoin Mc Alinden,30050883
 Eoin McAlinden,30050883
@@ -107,21 +132,31 @@ Molly McAlinden,30050884
 Brooke Mc Calmont,30050885
 Brooke Mc Clamont,30050885
 Brooke McCalmont,30050885
+Brooke McCalmond,30050885
+Brook McCalmont,30050885
 Miya Mc Clamont,30050813
 Miya Mc Calmont,30050813
 Miya McCalmont,30050813
+Myia Mc Clamont,30050813
+Fionn Mc Cann Kennedy,20110919
+Fionn Mc CK,20110919
 James Mc Cann-Kennedy,30050815
+James Mc Cann Kennedy,30050815
 James McCann-K,30050815
 Darragh Mc Cann-Kennedy,30050814
 Darragh McCann-Kennedy,30050814
 Darragh McCann K,30050814
 Darragh Mc C-K,30050814
 Isabella Mc Carron,20120105
-Isobella Mc Carron,20120105
+Isabella McCarron,20120105
+Isabella McCarron,20120105
+Isobella McCarron,20120105
+Saoirse McAuley,20120214
 Caoimhe Mc Closkey,30050816
 Darragh Mc Closkey,30050817
 Lucas McCluskey,20090827
 Lucas Mc Cluskey,20090827
+Lucas Mc Closkey,20090827
 Gregory Mc Cracken,30050818
 Gregory McCracken,30050818
 Keziah Mc Cracken,30050819
@@ -141,12 +176,17 @@ Jack Mc Gookin,30050825
 Naomi McGowan,30050826
 Naomi Mc Gowan,30050826
 Maximus McGuinness,20091130
+Maximus McGinnis,20091130
+Maximus Mc Ginnis,20091130
 Amy McGurk,30050827
 Amy Mc Gurk,30050827
 Niamh McHenry,30050828
 Niamh Mc Henry,30050828
+Odhran McKenna,20090216
 Anna McLaughlin,30050831
 Anna Mc Laughlin,30050831
+Anna M. McLaughlin,20100520
+Anna M Mc Laughlin,20100520
 Ben McLaughlin,30050832
 Ben Mc Laughlin,30050832
 Rose McLaughlin,30050833
@@ -160,6 +200,7 @@ Ollie McMacken,20100406
 Oisin McNicholl,30050835
 Oisin Mc Nicholl,30050835
 Eve McPherson,20071213
+Eve Mc Pherson,20071213
 Tom McShane,30050836
 Tom Mc Shane,30050836
 Jamie Mellon,30050862
@@ -167,6 +208,7 @@ Adam Merron,30050863
 Aimee Merron,30050864
 Clea Moore,20080402
 Ellen Mullan,20080101
+Freya Mullan,20100513
 Jessica Morgan,30050865
 Caelyn O'Connor,20100525
 Caelyn O Connor,20100525
@@ -177,27 +219,38 @@ Eimhear O'Kane,30050867
 Fiona O'Neill,30050868
 Fiona O Neill,30050868
 Kayleigh O'Neill,10000001
+Kayela O'Neill,10000001
+Kayelan O Neill,10000001
 Jodie Paterson,30050869
 Jodie Patterson,30050869
 Steven Paterson,30050870
 Steven Patterson,30050870
+Mya Priestly,20110309
+Brendan Quinn,20100521
 Lewis Robinson,30050872
 Charli Service,20091214
+Adam Smith,20110428
 Oliver Smith,30050873
 Johanna Staats-Howard,30050886
 Hannah Staats,30050886
 Hannah Staats Howard,30050886
+Hanna Staats H,30050886
 Samuel Staats-Howard,30050887
 Samuel Staats Howard,30050887
 Sam Staats Howard,30050887
 Sam Staats H,30050887
+Sam Staats,30050887
 Sam S H,30050887
+Abbie Stevenson,20080509
 Rebecca Rose Sweeney,30050888
 Rebecca Sweeney,30050888
+Molly Taylor,20110517
 Hollie Tweeddale,30050889
 Hollie Tweedale,30050889
 Alice Tweeddale,20110424
 Alice Tweedale,20110424
+Alice Tweddle,20110424
 Alex Whiteside,30050890
 Charlie Whiteside,30050891
 Jude Williams,30050892
+Ryan Williams,19741217

@@ -2,18 +2,40 @@
 const fs = require('fs');
 
 function formatTime(time) {
-    var baseTime = time.slice(0,-1).trim();
-    if(baseTime.indexOf(":") == -1) {
-        return "00:" + baseTime;
+    var baseTime = time.trim();
+    var timeArray = baseTime.split(".");
+    if(timeArray.length === 3) 
+        baseTime = timeArray[0] + ":" + timeArray[1] + "." + timeArray[2];
+
+    if((timeArray.length === 2)&&(timeArray[0] > 59))
+     {
+        var minutes = timeArray[0] / 60;
+        var seconds = timeArray[0] % 60;
+        if(seconds < 10) seconds = "0" + seconds;
+        baseTime = "0" + minutes.toFixed(0) + ":" + seconds + "." + timeArray[1];
+    } 
+
+    switch(baseTime.indexOf(":")) {
+        case -1: baseTime = "00:" + baseTime; break;
+        case 1: baseTime = "0" + baseTime; break;
+        default: baseTime = baseTime;
     }
-    else
-        return "0" + baseTime;
+    timeArray = baseTime.split(".");
+    if(timeArray.length === 1) 
+        baseTime = baseTime + ".00";
+    else {
+        if(timeArray[1].length === 1)
+           baseTime = baseTime + "0";
+    }
+
+    return baseTime;
+
 }
 
-const EventName = "LASC vs Strule (PTL)";
-const EventDate = "16/02/2019"
-const EventCode = "8D90DD1C-7914-427F-9F73-28CACF2954C9"
-const timingsCSV = "ptl_strule.csv"
+const EventName = "LASC vs Armagh (PTL)";
+const EventDate = "28/09/2019"
+const EventCode = "332257F2-4A13-4520-88EF-46D3C4ACDF67"
+const timingsCSV = "PTL_ARMGH.csv"
 
 var events = [];
 //Create fresh import file

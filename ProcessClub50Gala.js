@@ -32,24 +32,25 @@ function formatTime(time) {
 
 }
 
-const EventName = "Club 100m Gala"
+const EventName = "50m Club Gala";
+const EventDate = "09/12/2019"
+const EventCode = "2F99178F-BF8A-4EC2-BC6E-162B4DF5898A"
+const timingsCSV = "50mGalaDec2019.csv"
+
 const EventLocation = "Roe Valley leisure Centre"
-const EventDate = "20/05/2019"
-const EventCode = "E4E0A6AD-241B-4C9E-9978-BB60A480B253"
-const timingsCSV = "Club100mGalaMay2019.csv"
 const EventPoolSize = "25";
 
 var unmappedSwimmers = [];
 
 var events = [];
 //Create fresh import file
-var output = fs.openSync('ImportSwimTimes_100m.csv', 'w+');
+var output = fs.openSync('ImportSwimTimes.csv', 'w+');
 fs.writeSync(output, "SE Number,Date,Pool Size,Swim Distance,Stroke,Time,Split Time 1,Split Distance 1,Split Time 2,Split Distance 2,Split Time 3,Split Distance 3,Split Time 4,Split Distance 4,Split Time 5,Split Distance 5,Position,Relay,Event Number,Round Code,Gala (event ID),Location,Licenced,Licence Level\n")
 
 
 // First import Swim Ireland Mappings into program
 console.log("Loading in Swim Ireland mapping file")
-const SI_Mappings_Input = fs.readFileSync('LASC_SI.csv').toString().split("\n");
+const SI_Mappings_Input = fs.readFileSync('LASC_SI.txt').toString().split("\n");
 
 var SI_Mappings_JSON = {};
 
@@ -70,25 +71,27 @@ var currDistance;
 var currEvent
 var eventArray;
 
-const strokes = ["IM1", "Back", "Breast", "Free", "Fly", "IM2"]
+const strokes = ["Back", "Breast", "Fly", "Free", "IM"]
 
 const strokes_to_column = {
-    "IM1": 1,
-    "Back": 4,
-    "Breast": 7,
-    "Fly": 10,
-    "Free": 13,
-    "IM2": 16
+//    "IM1": 1,
+    "Back": 1,
+    "Breast": 4,
+    "Fly": 7,
+    "Free": 10
+    ,"IM": 13
 }
 
 strokes.forEach(stroke => {
     console.log("Processing", stroke, "times")
     Timings_Input.forEach(reportLine => {
+
+        //console.log("++", reportLine);
         reportLineArray = reportLine.split(',');    
 
         if(reportLineArray[strokes_to_column[stroke]].includes(" metre " + stroke)) {
             console.log("Detected group of times for", reportLineArray[strokes_to_column[stroke]])
-            currEvent = (stroke == ("IM1"|"IM2")) ? "Medley" : stroke;
+            currEvent = (stroke == ("IM")) ? "Medley" : stroke;
             currDistance = reportLineArray[strokes_to_column[stroke]].split(" ")[0];
             return;
         }

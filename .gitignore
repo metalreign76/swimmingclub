@@ -2,3 +2,4 @@ node_modules
 *.csv
 *.xlsx
 .env
+LASC_SI.txt

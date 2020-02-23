@@ -24,11 +24,11 @@ function formatTime(time) {
 
 }
 
-const EventName = "Lisburn vs Colerain vs LASC (Aquasprint Finals)";
-const EventLocation = "Larne Leisure Centre"
-const EventDate = "07/06/2019"
-const EventCode = "F8AEC1EF-4696-4B8E-A855-7A5D426D2DA0"
-const timingsCSV = "AquasprintFinals2019.csv"
+const EventName = "Limavady vs Templemore (Aquasprint)";
+const EventLocation = "Roe Valley Leisure Centre"
+const EventDate = "22/02/2020"
+const EventCode = "88326148-6C10-4093-94CC-75C9C6CF25D0"
+const timingsCSV = "templemore.csv"
 
 var unmappedSwimmers = [];
 
@@ -40,7 +40,7 @@ fs.writeSync(output, "SE Number,Date,Pool Size,Swim Distance,Stroke,Time,Split T
 
 // First import Swim Ireland Mappings into program
 console.log("Loading in Swim Ireland mapping file")
-const SI_Mappings_Input = fs.readFileSync('LASC_SI.csv').toString().split("\n");
+const SI_Mappings_Input = fs.readFileSync('LASC_SI.txt').toString().split("\n");
 
 var SI_Mappings_JSON = {};
 
